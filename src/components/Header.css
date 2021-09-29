@@ -1,0 +1,118 @@
+.header__div {
+  padding-top: 12em;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.2))), url("../images/militaryfam.jpg");
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.2)), url("../images/militaryfam.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat !important;
+  min-height: 80vh;
+  width: 100%;
+}
+
+.hero-circle {
+  width: 200px;
+}
+
+@media only screen and (min-width: 1100px) {
+  .hero-circle {
+    width: 300px !important;
+  }
+}
+
+.hero-btn {
+  width: 300px;
+  height: 50px;
+  background: #78cffd !important;
+}
+
+.hero-btn:hover {
+  color: white !important;
+  background: #78cffd !important;
+}
+
+Button {
+  color: #fff !important;
+}
+
+.header__btns {
+  border: 2px solid #78cffd !important;
+}
+
+.header__btns:hover {
+  color: #78cffd !important;
+  background-color: #232526 !important;
+  border: 2px solid #78cffd !important;
+}
+
+.header__bg {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0.5)));
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.5));
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.875;
+  min-height: 65vh;
+  max-width: 100%;
+}
+
+.p1__btns {
+  color: white !important;
+  background-color: #414345 !important;
+  border: 2px solid #78cffd !important;
+  padding: 5px !important;
+}
+
+.p1__btns:hover {
+  background-color: black !important;
+}
+
+.centered__div {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+}
+
+.side_by_side {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
+}
+
+.icon__style {
+  color: #78cffd !important;
+  font-size: 32px !important;
+}
+
+.icon__style2 {
+  color: #fff !important;
+  font-size: 32px !important;
+}
+
+input {
+  color: #78cffd !important;
+}
+
+.scroll-indicator {
+  margin-top: 17.5vh;
+}
+/*# sourceMappingURL=Header.css.map */
