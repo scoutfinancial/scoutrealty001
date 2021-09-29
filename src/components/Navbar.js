@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react"
 import Flip from "react-reveal/Flip"
 import Slide from "react-reveal/Slide"
 import LightSpeed from "react-reveal/LightSpeed"
-import { Nav, NavDropdown, Navbar, Button, Image } from "react-bootstrap"
+import { Nav, NavDropdown, Navbar, Image } from "react-bootstrap"
 
 import Logo from "../images/whitelogoonly.png"
 

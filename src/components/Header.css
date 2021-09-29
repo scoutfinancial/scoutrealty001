@@ -1,11 +1,19 @@
 .header__div {
   padding-top: 12em;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.2))), url("../images/militaryfam.jpg");
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.2)), url("../images/militaryfam.jpg");
-  background-position: center center;
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(0, 0, 0, 0.75)),
+      to(rgba(0, 0, 0, 0.2))
+    ),
+    url("https://media-private.canva.com/MAChIQDwa5M/1/screen_2x.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJWF6QO3UH4PAAJ6Q%2F20210929%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210929T020947Z&X-Amz-Expires=90041&X-Amz-Signature=043f347cca84a8272cb21a84e51f3eb83fa5fe520cfca61b9ee6955ed00b7a2a&X-Amz-SignedHeaders=host&response-expires=Thu%2C%2030%20Sep%202021%2003%3A10%3A28%20GMT");
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.2)),
+    url("https://media-private.canva.com/MAChIQDwa5M/1/screen_2x.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJWF6QO3UH4PAAJ6Q%2F20210929%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210929T020947Z&X-Amz-Expires=90041&X-Amz-Signature=043f347cca84a8272cb21a84e51f3eb83fa5fe520cfca61b9ee6955ed00b7a2a&X-Amz-SignedHeaders=host&response-expires=Thu%2C%2030%20Sep%202021%2003%3A10%3A28%20GMT");
+  background-position: center bottom;
   background-size: cover;
   background-repeat: no-repeat !important;
-  min-height: 80vh;
+  min-height: 60vh;
   width: 100%;
 }
 
@@ -45,7 +53,13 @@ Button {
 }
 
 .header__bg {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0.5)));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 0.45)),
+    to(rgba(0, 0, 0, 0.5))
+  );
   background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.5));
   background-position: center center;
   background-size: cover;
@@ -72,14 +86,14 @@ Button {
   display: flex !important;
   -webkit-box-orient: vertical !important;
   -webkit-box-direction: normal !important;
-      -ms-flex-direction: column !important;
-          flex-direction: column !important;
+  -ms-flex-direction: column !important;
+  flex-direction: column !important;
   -webkit-box-align: center !important;
-      -ms-flex-align: center !important;
-          align-items: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
   -webkit-box-pack: center !important;
-      -ms-flex-pack: center !important;
-          justify-content: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
 }
 
 .side_by_side {
@@ -88,14 +102,14 @@ Button {
   display: flex !important;
   -webkit-box-orient: horizontal !important;
   -webkit-box-direction: normal !important;
-      -ms-flex-direction: row !important;
-          flex-direction: row !important;
+  -ms-flex-direction: row !important;
+  flex-direction: row !important;
   -webkit-box-align: center !important;
-      -ms-flex-align: center !important;
-          align-items: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
   -webkit-box-pack: justify !important;
-      -ms-flex-pack: justify !important;
-          justify-content: space-between !important;
+  -ms-flex-pack: justify !important;
+  justify-content: space-between !important;
 }
 
 .icon__style {
@@ -115,4 +129,9 @@ input {
 .scroll-indicator {
   margin-top: 17.5vh;
 }
+
+.form-container {
+  width: 60vw;
+}
+
 /*# sourceMappingURL=Header.css.map */

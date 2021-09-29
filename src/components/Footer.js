@@ -118,14 +118,14 @@ function Footer() {
             &copy; {new Date().getFullYear()}{" "}
             <a href="/" className="footer-anchors">
               {" "}
-              Scout Lending
+              Scout Realty
             </a>
             <br />
             <a
               href="https://scoutindustries.com"
               className="footer__text footer-anchors"
             >
-              Scout Lending is a registered trademark of Scout Financial Group,
+              Scout Realty is a registered trademark of Scout Financial Group,
               Inc.
             </a>
           </div>

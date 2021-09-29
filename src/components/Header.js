@@ -1,15 +1,24 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect } from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
-import Slide from "react-reveal/Slide"
 import { Button } from "shards-react"
-import { Image } from "react-bootstrap"
-import { FaAngleDoubleDown } from "react-icons/fa"
+import Slide from "react-reveal/Slide"
+import { FaSearchLocation } from "react-icons/fa"
+import { Image, InputGroup, FormControl } from "react-bootstrap"
 
-import heroImg from "../images/foreverhome.png"
 import "./Header.css"
 
 function Header() {
+  const [form, setForm] = useState({
+    searchInput: "",
+  })
+
+  const updateForm = e => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    })
+  }
   /*
   useEffect(() => {
     randomImg = imgList[Math.floor(Math.random() * imgList.length)]
@@ -19,44 +28,23 @@ function Header() {
     <div className="header__div text-center text-md-left">
       <div className="mx-2">
         <Slide left>
-          <h1 className="text-white">Need a VA Home Loan?</h1>
-          <h1 className="text-white hero-txt">
-            Here's What Makes{" "}
-            <strong
-              style={{
-                fontWeight: "800",
-                textDecoration: "underline",
-                textDecorationColor: "#fff",
-              }}
-            >
-              Scout Lending
-            </strong>{" "}
-            Different.
-          </h1>
-          <br />
-          <Link to="/loan-options"></Link>
-          <Button
-            outline
-            size="lg"
-            theme="light"
-            className="hero-btn ml-2"
-            onClick={() => (window.location.href = "/start")}
-          >
-            Get a Quote
-          </Button>
+          <h1 className="text-white">Find Your Next Property</h1>
+          <h3 className="text-white">In a matter of minutes...</h3>
         </Slide>
-        <Slide right>
-          <div className="mt-4 text-center text-md-right">
-            <Image src={heroImg} roundedCircle className="hero-circle" />
-          </div>
-        </Slide>
-        <Slide bottom>
-          <div className="d-flex align-items-center justify-content-center mb-5">
-            <Link to="/#offers">
-              <FaAngleDoubleDown size={48} color="#fff" />
-            </Link>
-          </div>
-        </Slide>
+      </div>
+      <div className="d-flex align-items-center justify-content-center mt-5">
+        <InputGroup className="mb-1 form-container">
+          <FormControl
+            value={form.searchInput}
+            onChange={updateForm}
+            name="searchInput"
+            type="name"
+            placeholder="Search by city, address, or zip code"
+          />
+          <InputGroup.Text className="text-black">
+            <FaSearchLocation size={32} color="#78cffd" />
+          </InputGroup.Text>
+        </InputGroup>
       </div>
     </div>
   )
