@@ -25,7 +25,7 @@ function Footer() {
             Scout Realty
           </h5>
           <h6 className="text-center text-white white__h6">
-            Financing made easy
+            Realty made easy
           </h6>
           <br />
           <div className="footer__logo">
