@@ -14,6 +14,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Headr from "../components/Header"
+import Faq from "../components/FaqAccordion"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -151,8 +152,9 @@ const BlogIndex = ({ data, location }) => {
             ))}
           </Row>
           <Row>
-            <Col>
+            <Col className="mb-5">
               <h3 className="text-center mt-5">Frequently Asked Questions</h3>
+              <Faq />
             </Col>
           </Row>
         </Container>

@@ -1,0 +1,17 @@
+.faq-title {
+  color: #000;
+  text-align: center;
+}
+
+.accordion-div {
+  overflow-x: hidden;
+}
+
+.accordion-txt {
+  border: 3px solid #78cffd;
+}
+
+.accordion-txt:hover {
+  background: rgba(120, 207, 253, 0.45);
+}
+/*# sourceMappingURL=Accordion.css.map */
