@@ -4,6 +4,7 @@ import Flip from "react-reveal/Flip"
 import Slide from "react-reveal/Slide"
 import LightSpeed from "react-reveal/LightSpeed"
 import { Nav, NavDropdown, Navbar, Image } from "react-bootstrap"
+import { FaSearchLocation, FaMapPin } from "react-icons/fa"
 
 import Logo from "../images/whitelogoonly.png"
 
@@ -36,6 +37,7 @@ const NavComponent = () => {
         backgroundColor: navBackground ? "#212529" : "transparent",
         width: "100%",
       }}
+      className="transp-gradient"
     >
       <LightSpeed left>
         <Navbar.Brand href="/">
@@ -52,21 +54,30 @@ const NavComponent = () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto text-center" style={{ width: "100%" }}>
           <Flip bottom>
-            <NavDropdown title="About" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="/about">About Us</NavDropdown.Item>
-              <NavDropdown.Item href="/community">
-                Community Partners
-              </NavDropdown.Item>
+            <Nav.Link href="/">Realtors</Nav.Link>
+            <Nav.Link href="/">About</Nav.Link>
+            <NavDropdown title="Resources" id="navbarScrollingDropdown">
+              <NavDropdown.Item href="/guidance">Guidance</NavDropdown.Item>
+              <NavDropdown.Item href="/education">Education</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="/">Education</Nav.Link>
-            <Nav.Link href="/">Contact</Nav.Link>
           </Flip>
         </Nav>
         <Nav className="mr-auto text-center d-flex align-items-center justify-content-center">
           <Slide right>
-            <Nav.Link href="/">Buy</Nav.Link>
-            <Nav.Link href="/">Rent</Nav.Link>
-            <Nav.Link href="/">Sell</Nav.Link>
+            <Nav.Link
+              href="/"
+              className="d-flex align-items-center justify-content-center"
+            >
+              <FaSearchLocation className="mr-2" />
+              Search
+            </Nav.Link>
+            <Nav.Link
+              href="/"
+              className="d-flex align-items-center justify-content-center"
+            >
+              <FaMapPin className="mr-2" />
+              Listings
+            </Nav.Link>
           </Slide>
         </Nav>
       </Navbar.Collapse>

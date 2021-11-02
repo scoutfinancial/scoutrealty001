@@ -1,0 +1,6 @@
+.search-iframe {
+  overflow-y: hidden !important;
+  width: 100%;
+  height: 95vh;
+  padding-top: 5em;
+}
