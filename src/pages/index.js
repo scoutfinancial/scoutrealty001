@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-import { Container, Row, Col } from "react-bootstrap"
+import Pulse from "react-reveal/Pulse"
+import { Container, Row, Col, Card, Button } from "react-bootstrap"
 import {
   FaSearchLocation,
   FaQuestion,
@@ -119,6 +120,38 @@ const BlogIndex = ({ data, location }) => {
         </Container>
         <Container>
           <Row>
+            {posts.slice(0, 3).map(post => {
+              const title = post.frontmatter.title || post.fields.slug
+              //const kw = post.frontmatter.keywords.split(", ")
+
+              return (
+                <Col xs={12} sm={6} md={4} lg={4} xl={4} className="my-5">
+                  <div
+                    key={post.fields.slug}
+                    className="d-flex align-items-center justify-content-center"
+                  >
+                    <Pulse>
+                      <Card className="card-container recent-container">
+                        <Card.Img variant="top" src={post.frontmatter.image} />
+                        <Card.Body className="d-flex flex-column justify-content-around">
+                          <Link
+                            className="title-link txt-slug"
+                            to={post.fields.slug}
+                          >
+                            <Card.Title>{title}</Card.Title>
+                          </Link>
+                          <small>
+                            <em>published on</em> {post.frontmatter.date}
+                          </small>
+                        </Card.Body>
+                      </Card>
+                    </Pulse>
+                  </div>
+                </Col>
+              )
+            })}
+          </Row>
+          <Row>
             <Col>
               <h3 className="text-center mt-5">
                 The <strong style={{ color: "#78cffd" }}>new way</strong> to
@@ -182,6 +215,7 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          image
         }
       }
     }

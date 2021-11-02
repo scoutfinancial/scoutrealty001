@@ -1,0 +1,29 @@
+.guidance__banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1515896769750-31548aa180ed?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1668&q=80");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 8vh;
+}
+
+.featured-hdr {
+  color: black !important;
+}
+
+.card-btn {
+  color: black !important;
+}
+
+.card-btn:hover {
+  color: white !important;
+}
+
+.card-title {
+  color: black !important;
+}
+
+.card-title:hover {
+  color: #78cffd !important;
+}

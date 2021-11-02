@@ -72,7 +72,7 @@ const NavComponent = () => {
               Search
             </Nav.Link>
             <Nav.Link
-              href="/"
+              href="/listings"
               className="d-flex align-items-center justify-content-center"
             >
               <FaMapPin className="mr-2" />
