@@ -8,19 +8,16 @@ import { FaMailBulk } from "react-icons/fa"
 import Navb from "../components/Navbar2.js"
 import Footr from "../components/Footer.js"
 import Seo from "../components/seo"
-// import Header from "../components/Header"
 
 import "./search.css"
 
 const SearchIndex = () => {
   return (
     <>
-
+      <Navb />
       <iframe
         src="http://www.crmls.org/servlet/lDisplayListings?LA=EN"
-        width="100%"
-        height="825em"
-        className="search-iframe"
+        className="search-iframe mb-1"
       />
       <Footr />
     </>

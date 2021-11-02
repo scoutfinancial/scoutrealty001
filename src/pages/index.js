@@ -13,7 +13,7 @@ import {
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Header from "../components/Header"
+import Headr from "../components/Header"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -113,7 +113,7 @@ const BlogIndex = ({ data, location }) => {
       <Layout>
         <Container fluid>
           <Row>
-            <Header />
+            <Headr />
           </Row>
         </Container>
         <Container>
@@ -152,9 +152,7 @@ const BlogIndex = ({ data, location }) => {
           </Row>
           <Row>
             <Col>
-              <h3 className="text-center mt-5">
-                Frequently Asked Questions
-              </h3>
+              <h3 className="text-center mt-5">Frequently Asked Questions</h3>
             </Col>
           </Row>
         </Container>

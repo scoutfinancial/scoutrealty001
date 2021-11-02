@@ -65,7 +65,7 @@ const NavComponent = () => {
         <Nav className="mr-auto text-center d-flex align-items-center justify-content-center">
           <Slide right>
             <Nav.Link
-              href="/"
+              href="/search"
               className="d-flex align-items-center justify-content-center"
             >
               <FaSearchLocation className="mr-2" />
