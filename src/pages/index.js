@@ -1,7 +1,8 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 import Pulse from "react-reveal/Pulse"
-import { Container, Row, Col, Card, Button } from "react-bootstrap"
+import Flip from "react-reveal/Flip"
+import { Container, Row, Col, Card } from "react-bootstrap"
 import {
   FaSearchLocation,
   FaQuestion,
@@ -174,13 +175,15 @@ const BlogIndex = ({ data, location }) => {
             {tiles.map((tile, index) => (
               <Col key={index} xs={12} md={6} lg={4} className="mb-5">
                 {tile.icon}
-                <h5 className="d-flex align-items-center justify-content-center">
-                  {tile.title}
-                </h5>
-                <p className="text-center mx-3">{tile.description}</p>
-                <a className="d-flex align-items-center justify-content-center">
-                  {tile.link}
-                </a>
+                <Flip bottom>
+                  <h5 className="d-flex align-items-center justify-content-center">
+                    {tile.title}
+                  </h5>
+                  <p className="text-center mx-3">{tile.description}</p>
+                  <a className="d-flex align-items-center justify-content-center">
+                    {tile.link}
+                  </a>
+                </Flip>
               </Col>
             ))}
           </Row>

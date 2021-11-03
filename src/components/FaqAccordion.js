@@ -25,6 +25,7 @@ const useStyles = makeStyles(theme => ({
   },
   accordion: {
     border: "3px solid #78cffd",
+    marginBottom: "1rem",
     "&:hover": {
       background: "rgba(120, 207, 253, 0.45)",
     },
@@ -33,182 +34,72 @@ const useStyles = makeStyles(theme => ({
 
 function FaqAccordion() {
   const classes = useStyles()
-  const [expanded, setExpanded] = React.useState(false)
+  const [expanded, setExpanded] = React.useState(true)
 
   const handleChange = panel => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false)
   }
 
+  const faqContent = [
+    {
+      id: 1,
+      question: "Lorem ipsum dolor sit amet?",
+      answer:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in dapibus nisi, non ultrices felis. Duis eros odio, porta in fringilla id, iaculis vitae orci. Sed quis sapien sed libero eleifend bibendum ac non quam.",
+    },
+    {
+      id: 2,
+      question: "Lorem ipsum dolor sit amet?",
+      answer:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in dapibus nisi, non ultrices felis. Duis eros odio, porta in fringilla id, iaculis vitae orci. Sed quis sapien sed libero eleifend bibendum ac non quam.",
+    },
+    {
+      id: 3,
+      question: "Lorem ipsum dolor sit amet?",
+      answer:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in dapibus nisi, non ultrices felis. Duis eros odio, porta in fringilla id, iaculis vitae orci. Sed quis sapien sed libero eleifend bibendum ac non quam.",
+    },
+    {
+      id: 4,
+      question: "Lorem ipsum dolor sit amet?",
+      answer:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in dapibus nisi, non ultrices felis. Duis eros odio, porta in fringilla id, iaculis vitae orci. Sed quis sapien sed libero eleifend bibendum ac non quam.",
+    },
+    {
+      id: 5,
+      question: "Lorem ipsum dolor sit amet?",
+      answer:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in dapibus nisi, non ultrices felis. Duis eros odio, porta in fringilla id, iaculis vitae orci. Sed quis sapien sed libero eleifend bibendum ac non quam.",
+    },
+  ]
+
   return (
     <div>
       <div className="my-3 mx-4 accordion-div">
-        <Accordion
-          expanded={expanded === "panel1"}
-          onChange={handleChange("panel1")}
-          className={classes.accordion}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon style={{ color: "#78cffd" }} />}
-            aria-controls="panel1bh-content"
-            id="panel1bh-header"
+        {faqContent.map(faq => (
+          <Accordion
+            expanded={expanded === "panel"}
+            onChange={handleChange("panel")}
+            className={classes.accordion}
           >
-            <LightSpeed left>
-              <Typography className={classes.heading}>
-                <i>Lorem ipsum dolor sit amet?</i>
-              </Typography>
-            </LightSpeed>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Flip bottom>
-              <Typography className={classes.text}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus in dapibus nisi, non ultrices felis. Duis eros odio,
-                porta in fringilla id, iaculis vitae orci. Sed quis sapien sed
-                libero eleifend bibendum ac non quam.
-              </Typography>
-            </Flip>
-          </AccordionDetails>
-        </Accordion>
-        <br />
-        <Accordion
-          expanded={expanded === "panel2"}
-          onChange={handleChange("panel2")}
-          className={classes.accordion}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon style={{ color: "#78cffd" }} />}
-            aria-controls="panel2bh-content"
-            id="panel2bh-header"
-          >
-            <LightSpeed left>
-              <Typography className={classes.heading}>
-                <i>Lorem ipsum dolor sit amet?</i>
-              </Typography>
-            </LightSpeed>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Flip bottom>
-              <Typography className={classes.text}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus in dapibus nisi, non ultrices felis. Duis eros odio,
-                porta in fringilla id, iaculis vitae orci. Sed quis sapien sed
-                libero eleifend bibendum ac non quam.
-              </Typography>
-            </Flip>
-          </AccordionDetails>
-        </Accordion>
-        <br />
-        <Accordion
-          expanded={expanded === "panel3"}
-          onChange={handleChange("panel3")}
-          className={classes.accordion}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon style={{ color: "#78cffd" }} />}
-            aria-controls="panel3bh-content"
-            id="panel3bh-header"
-          >
-            <LightSpeed left>
-              <Typography className={classes.heading}>
-                <i>Lorem ipsum dolor sit amet?</i>
-              </Typography>
-            </LightSpeed>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Flip bottom>
-              <Typography className={classes.text}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus in dapibus nisi, non ultrices felis. Duis eros odio,
-                porta in fringilla id, iaculis vitae orci. Sed quis sapien sed
-                libero eleifend bibendum ac non quam.
-              </Typography>
-            </Flip>
-          </AccordionDetails>
-        </Accordion>
-        <br />
-        <Accordion
-          expanded={expanded === "panel4"}
-          onChange={handleChange("panel4")}
-          className={classes.accordion}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon style={{ color: "#78cffd" }} />}
-            aria-controls="panel4bh-content"
-            id="panel4bh-header"
-          >
-            <LightSpeed left>
-              <Typography className={classes.heading}>
-                <i>Lorem ipsum dolor sit amet?</i>
-              </Typography>
-            </LightSpeed>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Flip bottom>
-              <Typography className={classes.text}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus in dapibus nisi, non ultrices felis. Duis eros odio,
-                porta in fringilla id, iaculis vitae orci. Sed quis sapien sed
-                libero eleifend bibendum ac non quam.
-              </Typography>
-            </Flip>
-          </AccordionDetails>
-        </Accordion>
-        <br />
-        <Accordion
-          expanded={expanded === "panel5"}
-          onChange={handleChange("panel5")}
-          className={classes.accordion}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon style={{ color: "#78cffd" }} />}
-            aria-controls="panel4bh-content"
-            id="panel4bh-header"
-          >
-            <LightSpeed left>
-              <Typography className={classes.heading}>
-                <i>Lorem ipsum dolor sit amet?</i>
-              </Typography>
-            </LightSpeed>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Flip bottom>
-              <Typography className={classes.text}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus in dapibus nisi, non ultrices felis. Duis eros odio,
-                porta in fringilla id, iaculis vitae orci. Sed quis sapien sed
-                libero eleifend bibendum ac non quam.
-              </Typography>
-            </Flip>
-          </AccordionDetails>
-        </Accordion>
-        <br />
-        <Accordion
-          expanded={expanded === "panel6"}
-          onChange={handleChange("panel6")}
-          className={classes.accordion}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon style={{ color: "#78cffd" }} />}
-            aria-controls="panel4bh-content"
-            id="panel4bh-header"
-          >
-            <LightSpeed left>
-              <Typography className={classes.heading}>
-                <i>Lorem ipsum dolor sit amet?</i>
-              </Typography>
-            </LightSpeed>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Flip bottom>
-              <Typography className={classes.text}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus in dapibus nisi, non ultrices felis. Duis eros odio,
-                porta in fringilla id, iaculis vitae orci. Sed quis sapien sed
-                libero eleifend bibendum ac non quam.
-              </Typography>
-            </Flip>
-          </AccordionDetails>
-        </Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon style={{ color: "#78cffd" }} />}
+              aria-controls="panel1bh-content"
+              id="panel1bh-header"
+            >
+              <LightSpeed left>
+                <Typography className={classes.heading}>
+                  <i>{faq.question}</i>
+                </Typography>
+              </LightSpeed>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Flip bottom>
+                <Typography className={classes.text}>{faq.answer}</Typography>
+              </Flip>
+            </AccordionDetails>
+          </Accordion>
+        ))}
       </div>
     </div>
   )
