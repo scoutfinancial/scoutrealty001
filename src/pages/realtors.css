@@ -1,0 +1,42 @@
+.bold-txt {
+  color: #78cffd !important;
+}
+
+.team-nav {
+  text-align: center;
+}
+
+Nav.Link {
+  color: #78cffd !important;
+}
+
+.team-card {
+  z-index: 1;
+  padding: 5px;
+  margin: 20px;
+  text-align: center;
+}
+
+.text-overlay {
+  position: relative;
+  z-index: 2;
+  display: block;
+  background: rgba(0, 0, 0, 0.75) !important;
+  color: #fff !important;
+  padding: 5px;
+  margin-top: -9rem;
+  border-radius: 5px;
+}
+
+.learn-btn {
+  border-bottom: 3px solid #fff;
+  font-weight: 800;
+  font-size: medium;
+  cursor: grab;
+}
+
+/* .phone,
+.email,
+.slug-link {
+  visibility: hidden;
+} */

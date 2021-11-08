@@ -132,7 +132,13 @@ const BlogIndex = ({ data, location }) => {
                     className="d-flex align-items-center justify-content-center"
                   >
                     <Pulse>
-                      <Card className="card-container recent-container">
+                      <Card
+                        className="card-container recent-container"
+                        onClick={() => {
+                          window.open(`${post.fields.slug}`, "_self")
+                        }}
+                        style={{ cursor: "grab" }}
+                      >
                         <Card.Img variant="top" src={post.frontmatter.image} />
                         <Card.Body className="d-flex flex-column justify-content-around">
                           <Link

@@ -32,8 +32,8 @@ const NavComponent = () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto text-center" style={{ width: "100%" }}>
           <Flip bottom>
-            <Nav.Link href="/">Realtors</Nav.Link>
-            <Nav.Link href="/">About</Nav.Link>
+            <Nav.Link href="/realtors">Realtors</Nav.Link>
+            <Nav.Link href="/about">About</Nav.Link>
             <NavDropdown title="Resources" id="navbarScrollingDropdown">
               <NavDropdown.Item href="/guidance">Guidance</NavDropdown.Item>
               <NavDropdown.Item href="/education">Education</NavDropdown.Item>
