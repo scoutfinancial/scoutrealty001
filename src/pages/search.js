@@ -15,6 +15,7 @@ const SearchIndex = () => {
   return (
     <>
       <Navb />
+      <Seo title="Search Real Estate Listings" />
       <iframe
         src="https://www.crmls.org/servlet/lDisplayListings?LA=EN"
         className="search-iframe mb-1"
