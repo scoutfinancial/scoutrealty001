@@ -80,6 +80,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 
   // Also explicitly define the Markdown frontmatter
   // This way the "MarkdownRemark" queries will return `null` even when no
+  // these are pointless posts
   // blog posts are stored inside "content/blog" instead of returning an error
   createTypes(`
     type SiteSiteMetadata {

@@ -9,14 +9,14 @@ import Seo from "../components/seo"
 
 import "./search.css"
 
-const ListIndex = () => {
+const ListByCity = () => {
   return (
     <>
       <Navb />
       <Seo title="Real Estate Listings" />
       <Container>
         <iframe
-          src="https://apexidx.com/idx_lite/results/EN_LA/price_orderBy/asc_order/home,Townhouse_homeType/active,coming-soon,short-sales,foreclosures_homeStatus/273_city"
+          src="https://google.com"
           className="search-iframe mb-1"
           scrolling="no"
           frameBorder="0"
@@ -27,7 +27,7 @@ const ListIndex = () => {
   )
 }
 
-export default ListIndex
+export default ListByCity
 
 export const pageQuery = graphql`
   query {

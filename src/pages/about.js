@@ -1,16 +1,7 @@
 import * as React from "react"
 // import Slide from "react-reveal/Slide"
 import { Link, graphql } from "gatsby"
-import {
-  Container,
-  Row,
-  Col,
-  Nav,
-  InputGroup,
-  FormControl,
-  Button,
-  Image,
-} from "react-bootstrap"
+import { Container, Row, Col } from "react-bootstrap"
 
 import Navb from "../components/Navbar2.js"
 import Footr from "../components/Footer.js"

@@ -17,6 +17,11 @@
   width: 100%;
 }
 
+.floatlabel {
+  min-width: 350px;
+  max-width: 550px;
+}
+
 .proeprty-dropdown-title {
   color: #78cffd !important;
   font-weight: 800;

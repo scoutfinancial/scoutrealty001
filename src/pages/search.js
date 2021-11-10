@@ -16,10 +16,12 @@ const SearchIndex = () => {
     <>
       <Navb />
       <Seo title="Search Real Estate Listings" />
-      <iframe
-        src="https://www.crmls.org/servlet/lDisplayListings?LA=EN"
-        className="search-iframe mb-1"
-      />
+      <Container>
+        <iframe
+          src="https://www.crmls.org/servlet/lDisplayListings?LA=EN"
+          className="search-iframe mb-1"
+        />
+      </Container>
       <Footr />
     </>
   )

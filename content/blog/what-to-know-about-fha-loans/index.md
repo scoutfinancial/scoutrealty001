@@ -1,5 +1,5 @@
 ---
-title: What to Know About FHA Loans - Rates, Limits, and Loan Requirements
+title: What are FHA Loans? Everything You Need to Know
 date: "2021-10-20"
 description: If you’re applying for a loan, you’ll want to brush up on the latest FHA loan information, from rates and limits to loan requirements.
 keywords: FHA Loan Information, Applying for a Loan
@@ -9,7 +9,6 @@ image: https://i.ibb.co/DV6F8mT/Microsoft-Teams-image-4.jpg
 If you’re in the process of planning to apply for a loan, you’ll likely have encountered many different kinds of loans, including government-backed loans like the FHA loan. Many people prefer obtaining an FHA loan if possible because of the more flexible requirements it offers. It’s possible to qualify for an FHA loan even with a lower credit score or debt.
 
 Read on for the latest information you need to know when considering an FHA loan.
-
 
 <img src="./fam.png" class="img-fluid" alt="Responsive image">
 <br />
@@ -133,5 +132,3 @@ If you’re unsure whether an FHA loan or a conventional loan is better for your
 However, for both a conventional loan and an FHA loan, you’ll need to plan for additional expenses after obtaining your loan. Consider the expense of closing costs, which are often dependent on the home’s price and the type of mortgage, but generally range from 3% to 6% of a home’s value. Additionally, you’ll want to budget for unexpected repairs after purchase, particularly when purchasing an older home.
 
 Finding the right loan for your needs can be overwhelming, especially considering the right decision can save you headaches and money. To get expert guidance on what loan is best for your situation, reach out to us today and we’ll get you started in the direction of your goals.
-
-

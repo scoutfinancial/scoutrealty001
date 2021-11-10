@@ -1,43 +1,88 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import { Button } from "shards-react"
 import Slide from "react-reveal/Slide"
 import { FaAngleRight } from "react-icons/fa"
-import { Dropdown } from "react-bootstrap"
+import { Form, FloatingLabel } from "react-bootstrap"
 
 import "./Header.css"
 
-function Header() {
+const Header = () => {
+  const [city, setCity] = useState({
+    //component state
+    embedLink: "",
+  })
+
+  const updateCity = e => {
+    setCity({
+      ...city,
+      [e.target.name]: e.target.value,
+    })
+    console.log(city)
+  }
+
+  const submitForm = () => {
+    window.open("/listingbycity")
+  }
+
   return (
     <div className="header__div text-center text-md-left">
       <div className="mx-5">
         <Slide left>
           <h1 className="text-white text-center">Find Your Next Property</h1>
           <h3 className="text-white text-center">In a matter of minutes...</h3>
-          <Dropdown className="text-center mt-4" size="lg">
-            <Dropdown.Toggle
-              variant="light"
-              id="dropdown-basic"
-              className="proeprty-dropdown-title"
-              style={{ border: "2px solid #78cffd" }}
+          <div className="d-flex align-items-center justify-content-center">
+            <Form
+              noValidate
+              onSubmit={submitForm}
+              id="insform"
+              netlify
+              className="floatlabel"
             >
-              I want to find a property in...{"       "}
-            </Dropdown.Toggle>
-
-            <Dropdown.Menu>
-              <Dropdown.Item href="#/action-1">Austin, TX</Dropdown.Item>
-              <Dropdown.Item href="#/action-2">Dallas, TX</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">Houston, TX</Dropdown.Item>
-              <Dropdown.Item href="#/action-4">Denver, CO</Dropdown.Item>
-              <Dropdown.Item href="#/action-5">Los Angeles, CA</Dropdown.Item>
-              <Dropdown.Item href="#/action-7">Oakland, CA</Dropdown.Item>
-              <Dropdown.Item href="#/action-8">San Francisco, CA</Dropdown.Item>
-              <Dropdown.Item href="#/action-9">Miami, FL</Dropdown.Item>
-              <Dropdown.Item href="#/action-10">Tampa Bay, FL</Dropdown.Item>
-              <Dropdown.Item href="#/action-11">Seattle, WA</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
+              <Form.Group className="text-center mt-4 mx-5">
+                {/* <Form.Label></Form.Label> */}
+                <FloatingLabel
+                  controlId="floatingSelect"
+                  label="I want to find a property in..."
+                  style={{ color: "black !important" }}
+                >
+                  <Form.Select
+                    aria-label="Floating city select"
+                    onChange={updateCity}
+                    name="embedLink"
+                    className="proeprty-dropdown-title"
+                    style={{ border: "2px solid #78cffd" }}
+                  >
+                    <option>Select your city...</option>
+                    <option value="https://apexidx.com/idx_lite/results/EN_LA/price_orderBy/asc_order/home,Townhouse_homeType/active,coming-soon,short-sales,foreclosures_homeStatus/273_city">
+                      Los Angeles
+                    </option>
+                    <option value="https://apexidx.com/idx_lite/results/EN_LA/price_orderBy/asc_order/home,Townhouse_homeType/active,coming-soon,short-sales,foreclosures_homeStatus/438_city">
+                      San Diego
+                    </option>
+                    <option value="https://apexidx.com/idx_lite/results/EN_LA/price_orderBy/asc_order/home,Townhouse_homeType/active,coming-soon,short-sales,foreclosures_homeStatus/370_city">
+                      Palmdale
+                    </option>
+                    <option value="https://apexidx.com/idx_lite/results/EN_LA/price_orderBy/asc_order/home,Townhouse_homeType/active,coming-soon,short-sales,foreclosures_homeStatus/2943_city">
+                      San Francisco
+                    </option>
+                    <option value="https://apexidx.com/idx_lite/results/EN_LA/price_orderBy/asc_order/home,Townhouse_homeType/active,coming-soon,short-sales,foreclosures_homeStatus/1627_city">
+                      Oakland
+                    </option>
+                    <option value="https://apexidx.com/idx_lite/results/EN_LA/price_orderBy/asc_order/home,Townhouse_homeType/active,coming-soon,short-sales,foreclosures_homeStatus/595_city">
+                      San Jose
+                    </option>
+                    <option value="https://apexidx.com/idx_lite/results/EN_LA/price_orderBy/asc_order/home,Townhouse_homeType/active,coming-soon,short-sales,foreclosures_homeStatus/573_city">
+                      Sacramento
+                    </option>
+                    <option value="https://apexidx.com/idx_lite/results/EN_LA/price_orderBy/asc_order/home,Townhouse_homeType/active,coming-soon,short-sales,foreclosures_homeStatus/30_city">
+                      Bakersfield
+                    </option>
+                  </Form.Select>
+                </FloatingLabel>
+              </Form.Group>
+            </Form>
+          </div>
           <h5
             className="mt-5 text-center d-flex align-items-center justify-content-center h5-search-btn"
             onClick={() => {
