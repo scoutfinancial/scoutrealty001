@@ -3,7 +3,7 @@ import React, { useState } from "react"
 import { Link, graphql } from "gatsby"
 import Slide from "react-reveal/Slide"
 import Flip from "react-reveal/Flip"
-import { Container, Row, Col, Button, Card } from "react-bootstrap"
+import { Container, Row, Col, Button } from "react-bootstrap"
 
 //self created imports
 import Nav from "../components/Navbar"

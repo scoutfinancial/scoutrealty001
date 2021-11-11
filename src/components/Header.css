@@ -17,6 +17,11 @@
   width: 100%;
 }
 
+.childinparent {
+  visibility: hidden !important;
+  display: none !important;
+}
+
 .floatlabel {
   min-width: 350px;
   max-width: 550px;

@@ -18,7 +18,7 @@ import Seo from "../components/seo"
 
 import "./realtors.css"
 
-const realtors = () => {
+const teamIndex = () => {
   const team = [
     {
       name: "John Doe",
@@ -59,7 +59,7 @@ const realtors = () => {
     {
       name: "Isaiah Thomas",
       username: "isaiahthomas",
-      title: "Licensed Real Estate Broker",
+      title: "Software Engineer",
       phone: "(661) 123 - 1234",
       email: "isaiah@scoutrealty.com",
       link: "link text",
@@ -71,7 +71,7 @@ const realtors = () => {
     {
       name: "Norman Cook",
       username: "normancook",
-      title: "Licensed Real Estate Broker",
+      title: "Public Relations Manager",
       phone: "(661) 123 - 1234",
       email: "norman@scoutrealty.com",
       link: "link text",
@@ -83,7 +83,7 @@ const realtors = () => {
     {
       name: "Thelma Umana",
       username: "thelmaumana",
-      title: "Licensed Real Estate Broker",
+      title: "Licensed Insurance Broker",
       phone: "(661) 123 - 1234",
       email: "thelma@scoutrealty.com",
       link: "link text",
@@ -174,7 +174,7 @@ const realtors = () => {
   )
 }
 
-export default realtors
+export default teamIndex
 
 export const pageQuery = graphql`
   query {

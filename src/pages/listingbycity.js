@@ -9,14 +9,15 @@ import Seo from "../components/seo"
 
 import "./search.css"
 
-const ListByCity = () => {
+const ListByCity = ({ parentToChild }) => {
   return (
     <>
+      {parentToChild}
       <Navb />
       <Seo title="Real Estate Listings" />
       <Container>
         <iframe
-          src="https://google.com"
+          src={parentToChild}
           className="search-iframe mb-1"
           scrolling="no"
           frameBorder="0"

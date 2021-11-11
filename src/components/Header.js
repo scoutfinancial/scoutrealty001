@@ -4,25 +4,26 @@ import { Link } from "gatsby"
 import Slide from "react-reveal/Slide"
 import { FaAngleRight } from "react-icons/fa"
 import { Form, FloatingLabel } from "react-bootstrap"
+import ListByCity from "../pages/listingbycity"
 
 import "./Header.css"
 
 const Header = () => {
-  const [city, setCity] = useState({
-    //component state
-    embedLink: "",
-  })
+  const [city, setCity] = useState("")
 
   const updateCity = e => {
     setCity({
       ...city,
       [e.target.name]: e.target.value,
     })
-    console.log(city)
+    //pass parent data to child
+    parentToChild(city)
+    //route to /listingbycity
+    window.open("/listingbycity", "_self")
   }
 
-  const submitForm = () => {
-    window.open("/listingbycity")
+  const parentToChild = () => {
+    setCity(city)
   }
 
   return (
@@ -32,15 +33,8 @@ const Header = () => {
           <h1 className="text-white text-center">Find Your Next Property</h1>
           <h3 className="text-white text-center">In a matter of minutes...</h3>
           <div className="d-flex align-items-center justify-content-center">
-            <Form
-              noValidate
-              onSubmit={submitForm}
-              id="insform"
-              netlify
-              className="floatlabel"
-            >
+            <Form noValidate id="insform" netlify className="floatlabel">
               <Form.Group className="text-center mt-4 mx-5">
-                {/* <Form.Label></Form.Label> */}
                 <FloatingLabel
                   controlId="floatingSelect"
                   label="I want to find a property in..."
@@ -94,23 +88,9 @@ const Header = () => {
           </h5>
         </Slide>
       </div>
-      <div></div>
-      {/*
-      <div className="d-flex align-items-center justify-content-center mt-5">
-        <InputGroup className="mb-1 form-container">
-          <FormControl
-            value={form.searchInput}
-            onChange={updateForm}
-            name="searchInput"
-            type="name"
-            placeholder="Search by city, address, or zip code"
-          />
-          <InputGroup.Text className="text-black search-btn">
-            <FaSearchLocation size={24} color="#78cffd" />
-          </InputGroup.Text>
-        </InputGroup>
+      <div className="childinparent">
+        <ListByCity parentToChild={city} />
       </div>
-      */}
     </div>
   )
 }
