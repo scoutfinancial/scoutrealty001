@@ -1,0 +1,8 @@
+.scout-txt {
+  color: #78cffd !important;
+  text-decoration: none !important;
+}
+
+.scout-txt:hover {
+    text-decoration: underline #78cffd !important;
+}

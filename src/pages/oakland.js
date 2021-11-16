@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import { Container } from "react-bootstrap"
 
 import Navb from "../components/Navbar2.js"
@@ -8,18 +8,14 @@ import Seo from "../components/seo"
 
 import "./search.css"
 
-const ListByCity = props => {
-  useEffect(() => {
-    console.log(props.newCity)
-  }, [props])
-
+const Oakland = () => {
   return (
     <>
       <Navb />
       <Seo title="Real Estate Listings" />
       <Container>
         <iframe
-          src={props.newCity}
+          src="https://apexidx.com/idx_lite/results/EN_LA/price_orderBy/asc_order/home,Townhouse_homeType/active,coming-soon,short-sales,foreclosures_homeStatus/1627_city"
           className="search-iframe mb-1"
           scrolling="no"
           frameBorder="0"
@@ -31,7 +27,7 @@ const ListByCity = props => {
   )
 }
 
-export default ListByCity
+export default Oakland
 
 export const pageQuery = graphql`
   query {

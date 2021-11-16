@@ -54,7 +54,7 @@ const NavComponent = () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto text-center" style={{ width: "100%" }}>
           <Flip bottom>
-            <Nav.Link href="/realtors">Realtors</Nav.Link>
+            <Nav.Link href="/team">Realtors</Nav.Link>
             <Nav.Link href="/about">About</Nav.Link>
             <NavDropdown title="Resources" id="navbarScrollingDropdown">
               <NavDropdown.Item href="/guidance">Guidance</NavDropdown.Item>

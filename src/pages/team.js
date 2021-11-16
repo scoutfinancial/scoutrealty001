@@ -1,6 +1,5 @@
 import * as React from "react"
-// import Slide from "react-reveal/Slide"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import {
   Container,
   Row,
@@ -8,7 +7,6 @@ import {
   Nav,
   InputGroup,
   FormControl,
-  Button,
   Image,
 } from "react-bootstrap"
 
