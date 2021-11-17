@@ -121,12 +121,20 @@ const BlogIndex = ({ data, location }) => {
         </Container>
         <Container>
           <Row>
+            <Col>
+              <h3 className="mt-5 mb-5 text-center">
+                Recent <strong style={{ color: "#78cffd" }}>Guidance</strong>{" "}
+                Updates
+              </h3>
+            </Col>
+          </Row>
+          <Row>
             {posts.slice(0, 3).map(post => {
               const title = post.frontmatter.title || post.fields.slug
               //const kw = post.frontmatter.keywords.split(", ")
 
               return (
-                <Col xs={12} sm={6} md={4} lg={4} xl={4} className="my-5">
+                <Col xs={12} sm={6} md={4} lg={4} xl={4} className="mb-5">
                   <div
                     key={post.fields.slug}
                     className="d-flex align-items-center justify-content-center"

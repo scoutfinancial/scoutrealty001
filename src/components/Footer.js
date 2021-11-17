@@ -4,9 +4,13 @@ import { Row, Col } from "shards-react"
 import { pulse } from "react-animations"
 import Image from "react-bootstrap/Image"
 import Logo from "../images/whitelogoonly.png"
-
 import styled, { keyframes } from "styled-components"
-import { FaLinkedin, FaInstagram } from "react-icons/fa"
+import {
+  FaLinkedin,
+  FaInstagram,
+  FaSearchLocation,
+  FaMapPin,
+} from "react-icons/fa"
 
 import "./Footer.css"
 
@@ -24,9 +28,7 @@ function Footer() {
           <h5 className="text-uppercase text-white mb-4 mt-3 font-weight-bold footer-headers">
             Scout Realty
           </h5>
-          <h6 className="text-center text-white white__h6">
-            Realty made easy
-          </h6>
+          <h6 className="text-center text-white white__h6">Realty made easy</h6>
           <br />
           <div className="footer__logo">
             <PulseDiv>
@@ -45,16 +47,14 @@ function Footer() {
           <h5 className="text-uppercase mb-4 mt-3 font-weight-bold footer-headers text-white">
             Main Nav
           </h5>
-          <Link className="footer-anchors" to="/home/#contact">
-            Buy
+          <Link className="footer-anchors" to="/search">
+            <FaSearchLocation className="mr-2" />
+            Search
           </Link>
           <br />
-          <Link className="footer-anchors" to="/home/#contact">
-            Rent
-          </Link>
-          <br />
-          <Link className="footer-anchors" to="/home/#contact">
-            Sell
+          <Link className="footer-anchors" to="/listings">
+            <FaMapPin className="mr-2" />
+            Listings
           </Link>
           <hr />
           <Link className="footer-anchors" to="/">
@@ -63,6 +63,18 @@ function Footer() {
           <br />
           <Link className="footer-anchors" to="/about">
             About
+          </Link>
+          <br />
+          <Link className="footer-anchors" to="/team">
+            Realtors
+          </Link>
+          <br />
+          <Link className="footer-anchors" to="/partners">
+            Partners
+          </Link>
+          <br />
+          <Link className="footer-anchors" to="/loan-options">
+            Guidance
           </Link>
           <br />
           <Link className="footer-anchors" to="/loan-options">
@@ -107,9 +119,7 @@ function Footer() {
         <Col
           sm={12}
           className="text-white text-center d-flex flex-column align-items-center justify-content-center"
-        >
-          
-        </Col>
+        ></Col>
       </Row>
       <br />
       <Row>
